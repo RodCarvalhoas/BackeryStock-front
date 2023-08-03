@@ -1,0 +1,27 @@
+.container{
+    height: 85%;
+    background-color: rgb(80, 80, 80);
+}
+
+i {
+    vertical-align: middle;
+    margin-right: .6rem;
+    color: white;
+    display: inline-flex;
+    padding-right: .6rem;
+}
+
+.mat-list {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: .8rem;
+    margin-bottom: .8rem;
+    padding-right: .68em;
+}
+
+.mat-sidenav{
+    background-color: rgb(98, 98, 98);
+    border-color: white;
+    border-radius: 1%;
+}

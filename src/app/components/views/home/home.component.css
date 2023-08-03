@@ -1,0 +1,23 @@
+.home {
+    width: 95%;
+    height: 8%;
+    margin: 1rem auto;
+    background-color: rgb(98, 98, 98);
+}
+
+.title {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.subtitle{
+    color: white;
+    margin-left: 10px;
+}
+
+@media(max-width: 450px){
+    .home{
+        width: 70%;
+    }
+}

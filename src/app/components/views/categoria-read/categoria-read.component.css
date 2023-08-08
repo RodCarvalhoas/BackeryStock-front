@@ -11,7 +11,8 @@
 .title h1{
     font-size: 2rem;
     color: rgb(180, 179, 179);
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 10px 10px 5px black;
 }
 
 button{
@@ -21,6 +22,7 @@ button{
 
 .table{
     width: 100%;
+    border-radius: 2%;
 }
 
 .edit{

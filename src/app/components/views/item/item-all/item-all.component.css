@@ -1,0 +1,44 @@
+.content{
+    width: 90%;
+    margin: 1.4rem auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h1{
+    font-size: 2rem;
+    color: rgb(180, 179, 179);
+    font-weight: 700;
+    text-shadow: 10px 10px 5px black;
+}
+
+button{
+    margin-bottom: .7rem;
+    background-color: white;
+}
+
+.table{
+    width: 100%;
+    border-radius: 2%;
+}
+
+.edit{
+    color: rgb(0, 0, 0);
+}
+
+.delete{
+    color: rgba(255, 0, 0, 0.764);
+    margin-left: .5rem;
+}
+
+.acoes{
+    width: 7rem;
+}
+
+.livros{
+    color: green;
+    margin: .3rem;
+}

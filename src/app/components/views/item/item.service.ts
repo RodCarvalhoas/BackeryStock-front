@@ -12,11 +12,16 @@ export class ItemService {
 
   baseUrl: String = environment.baseUrl;
 
-  constructor(private http: HttpClient, private _sack: MatSnackBar) { }
+  constructor(private http: HttpClient) { }
 
-  findAllByCategoria(id_cat: number):Observable<Item[]>{
+  findAllByCategoria(id_cat: number): Observable<Item[]>{
     const url = `${this.baseUrl}/item?categoria_id=${id_cat}`
     return this.http.get<Item[]>(url)
+  }
+
+  create(id_cat: number, item: Item): Observable<Item>{
+    const url = `${this.baseUrl}/item?categoria_id=${id_cat}`
+    return this.http.post<Item>(url, item);
   }
 
 }

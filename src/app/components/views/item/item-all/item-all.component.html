@@ -4,7 +4,7 @@
         <h1>ITENS</h1>
     </div>
 
-    <button class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">NOVO LIVRO</button>
+    <button (click)="navegarParaCriarItem()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">NOVO ITEM</button>
 
     <div class="content-table" class="mat-elevation-z8 content-table">
         <table class="table" mat-table [dataSource]="itens">
@@ -18,31 +18,31 @@
             <!-- Name Column -->
             <ng-container matColumnDef="name">
               <th mat-header-cell *matHeaderCellDef> NAME </th>
-              <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+              <td mat-cell *matCellDef="let element"  > {{ element.name }} </td>
             </ng-container>
           
             <!-- Weight Column -->
             <ng-container matColumnDef="quantidade">
               <th mat-header-cell *matHeaderCellDef> QUANTIDADE </th>
-              <td mat-cell *matCellDef="let element"> {{ element.quantidade }} </td>
+              <td mat-cell *matCellDef="let element" style="padding-left: 50px;"> {{ element.quantidade }} </td>
+            </ng-container>
+
+             <!-- Weight Column -->
+             <ng-container matColumnDef="unMedida">
+              <th mat-header-cell *matHeaderCellDef> UN MEDIDA </th>
+              <td mat-cell *matCellDef="let element" style="padding-left: 50px;"> {{ element.unMedida }} </td>
             </ng-container>
 
             <!-- Weight Column -->
             <ng-container matColumnDef="valorUn">
-                <th mat-header-cell *matHeaderCellDef> VALOR UN </th>
-                <td mat-cell *matCellDef="let element"> {{ element.valorUn }} </td>
-              </ng-container>
-
-              <!-- Weight Column -->
-            <ng-container matColumnDef="unMedida">
-                <th mat-header-cell *matHeaderCellDef> UN MEDIDA </th>
-                <td mat-cell *matCellDef="let element"> {{ element.unMedida }} </td>
-              </ng-container>
+              <th mat-header-cell *matHeaderCellDef> VALOR UN </th>
+              <td mat-cell *matCellDef="let element" style="padding-left: 20px;"> R$ {{element.valorUn }} </td>
+            </ng-container>
 
               <!-- Weight Column -->
             <ng-container matColumnDef="total">
                 <th mat-header-cell *matHeaderCellDef> VALOR TOTAL </th>
-                <td mat-cell *matCellDef="let element"> {{ element.total }} </td>
+                <td mat-cell *matCellDef="let element" style="padding-left: 30px;"> R$ {{ element.total }} </td>
               </ng-container>
 
             <!-- Symbol Column -->

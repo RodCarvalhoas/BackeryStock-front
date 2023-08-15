@@ -6,6 +6,7 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { ItemAllComponent } from './components/views/item/item-all/item-all.component';
+import { ItemCreateComponent } from './components/views/item/item-create/item-create.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'categorias/:id_cat/item',
     component: ItemAllComponent
+  },
+  {
+    path: 'categorias/:id_cat/item/create',
+    component: ItemCreateComponent
   }
 ];
 

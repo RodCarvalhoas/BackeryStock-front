@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item.model';
 import { ItemService } from '../item.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -15,9 +15,9 @@ export class ItemAllComponent implements OnInit{
 
   id_cat?: number = undefined;
 
-  displayedColumns: string[] = ['id', 'name', 'quantidade','valorUn', 'unMedida', 'total', 'acoes'];
+  displayedColumns: string[] = ['id', 'name', 'quantidade','unMedida', 'valorUn', 'total', 'acoes'];
 
-  constructor(private service: ItemService, private route: ActivatedRoute){
+  constructor(private service: ItemService, private route: ActivatedRoute, private router: Router){
     
   }
 
@@ -35,4 +35,7 @@ export class ItemAllComponent implements OnInit{
     })
   }
 
+  navegarParaCriarItem(): void{
+    this.router.navigate([`categorias/${this.id_cat}/item/create`])
+  }
 }

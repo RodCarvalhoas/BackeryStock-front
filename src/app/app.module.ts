@@ -19,13 +19,16 @@ import { CategoriaReadComponent } from './components/views/categoria/categoria-r
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { ItemAllComponent } from './components/views/item/item-all/item-all.component';
+import { ItemCreateComponent } from './components/views/item/item-create/item-create.component';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 @NgModule({
@@ -39,7 +42,8 @@ import { ItemAllComponent } from './components/views/item/item-all/item-all.comp
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
     CategoriaUpdateComponent,
-    ItemAllComponent
+    ItemAllComponent,
+    ItemCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,9 @@ import { ItemAllComponent } from './components/views/item/item-all/item-all.comp
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,29 @@
+<form>
+    <h1>DELETAR ITEM - </h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input disabled [(ngModel)]="item.name" matInput type="text" name="Name">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Quantidade</mat-label>
+        <input disabled [(ngModel)]="item.quantidade" matInput required type="number" name="Quantidade" >
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Un Medida</mat-label>
+        <input disabled [(ngModel)]="item.unMedida" matInput required type="text" name="unMedida">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Valor Un</mat-label>
+        <input disabled [(ngModel)]="item.valorUn" matInput type="number" name="ValorUn">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Total</mat-label>
+        <input disabled [(ngModel)]="item.total" matInput type="number" name="total">
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button (click)="deleteById()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">DELETAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+</form>

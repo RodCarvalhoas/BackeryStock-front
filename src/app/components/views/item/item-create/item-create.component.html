@@ -1,5 +1,5 @@
 <form>
-    <h1>NOVO ITEM</h1>
+    <h1>NOVO ITEM + </h1>
 
     <mat-form-field class="form">
         <mat-label>Name</mat-label>
@@ -28,6 +28,6 @@
     
     <div class="buttons">
         <button [disabled]="hasErrors()" (click)="create()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">CRIAR</button>
-        <button class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
     </div>
 </form>

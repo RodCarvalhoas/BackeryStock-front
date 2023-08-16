@@ -18,14 +18,16 @@ enum UnidadeMedida {
 })
 export class ItemCreateComponent implements OnInit{
 
+  //Validações
   name = new FormControl("", [Validators.minLength(3), Validators.maxLength(100)]);
   quantidade = new FormControl("", [Validators.min(1)]);
   unMedida = new FormControl("", [Validators.required]);
   valorUn = new FormControl("", [Validators.min(1)]);
 
-
+  //id categoria em branco
   id_cat?: number = undefined;
 
+  //obj item em branco
   item: Item = {
     name: ``,
     quantidade: undefined,
@@ -34,7 +36,7 @@ export class ItemCreateComponent implements OnInit{
     total: 0
   }
 
-
+  //constructor do Component
   constructor(private service: ItemService, private route: ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
@@ -44,9 +46,11 @@ export class ItemCreateComponent implements OnInit{
     }
   }
 
+  //Unidades de medidas
   unidadesPermitidas: UnidadeMedida[] = [UnidadeMedida.KG, UnidadeMedida.L, UnidadeMedida.g, UnidadeMedida.ml];
   selectedUnidade: UnidadeMedida | undefined;
 
+  //validação dos erros com o boolean
   hasErrors(): boolean {
     return (
       this.name.invalid ||
@@ -54,8 +58,9 @@ export class ItemCreateComponent implements OnInit{
       this.unMedida.invalid ||
       this.valorUn.invalid
     );
-}
+  }
 
+  //mensagens caso der erro
   getMessage(fieldName: string): string {
     if (fieldName === 'name' && this.name.invalid) {
       return 'O campo NAME deve conter entre 3 e 100 caracteres';
@@ -76,12 +81,16 @@ export class ItemCreateComponent implements OnInit{
     return '';
   }
 
-
+  //metodo para criar um item
   create(): void{
     this.service.create(this.id_cat!, this.item).subscribe((resposta) => {
       this.router.navigate([`categorias/${this.id_cat}/item`])
     })
 
+  }
+
+  cancel(): void{
+    this.router.navigate([`categorias`])
   }
 
 

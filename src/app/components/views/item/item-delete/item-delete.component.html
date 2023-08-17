@@ -15,12 +15,15 @@
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Valor Un</mat-label>
-        <input disabled [(ngModel)]="item.valorUn" matInput type="number" name="ValorUn">
+        <input disabled [(ngModel)]="item.valorUn" matInput style="margin-left: .5rem;" type="number" name="ValorUn">
+        <span matPrefix>R$</span>
     </mat-form-field>
     <mat-form-field class="form">
         <mat-label>Total</mat-label>
-        <input disabled [(ngModel)]="item.total" matInput type="number" name="total">
+        <input disabled [(ngModel)]="item.total" matInput style="margin-left: .5rem;" type="number" name="total">
+        <span matPrefix>R$</span>
     </mat-form-field>
+    
     
     <div class="buttons">
         <button (click)="deleteById()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">DELETAR</button>

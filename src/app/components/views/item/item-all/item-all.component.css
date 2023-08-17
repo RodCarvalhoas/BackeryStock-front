@@ -26,17 +26,26 @@ button{
     
 }
 
+.action-icons {
+    display: flex;
+  }
+
 .edit{
     color: rgb(0, 0, 0);
+    margin-right: 1rem; 
 }
 
 .delete{
     color: rgba(255, 0, 0, 0.764);
-    margin-left: .5rem;
+}
+
+.remove{
+    margin-right: 1.2rem; 
+    color: rgba(255, 0, 0, 0.764);
 }
 
 .acoes{
-    width: 7rem;
+    width: 10rem;
 }
 
 .livros{

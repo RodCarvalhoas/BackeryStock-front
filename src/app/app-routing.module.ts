@@ -8,6 +8,8 @@ import { CategoriaUpdateComponent } from './components/views/categoria/categoria
 import { ItemAllComponent } from './components/views/item/item-all/item-all.component';
 import { ItemCreateComponent } from './components/views/item/item-create/item-create.component';
 import { ItemDeleteComponent } from './components/views/item/item-delete/item-delete.component';
+import { ItemUpdateComponent } from './components/views/item/item-update/item-update.component';
+import { ItemOuputComponent } from './components/views/item/item-ouput/item-ouput.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'categorias/:id_cat/item/:id/delete',
     component: ItemDeleteComponent
+  },
+  {
+    path: 'categorias/:id_cat/item/:id/update',
+    component: ItemUpdateComponent
+  },
+  {
+    path: 'categorias/:id_cat/item/:id/item-output',
+    component: ItemOuputComponent
   }
 ];
 

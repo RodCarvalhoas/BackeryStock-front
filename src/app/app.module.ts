@@ -29,6 +29,8 @@ import { ItemAllComponent } from './components/views/item/item-all/item-all.comp
 import { ItemCreateComponent } from './components/views/item/item-create/item-create.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ItemDeleteComponent } from './components/views/item/item-delete/item-delete.component';
+import { ItemUpdateComponent } from './components/views/item/item-update/item-update.component';
+import { ItemOuputComponent } from './components/views/item/item-ouput/item-ouput.component';
 
 
 
@@ -45,7 +47,9 @@ import { ItemDeleteComponent } from './components/views/item/item-delete/item-de
     CategoriaUpdateComponent,
     ItemAllComponent,
     ItemCreateComponent,
-    ItemDeleteComponent
+    ItemDeleteComponent,
+    ItemUpdateComponent,
+    ItemOuputComponent
   ],
   imports: [
     BrowserModule,

@@ -12,12 +12,6 @@ h1 {
     margin-bottom: 3rem;
 }
 
-span {
-    margin-left: .5rem;
-    color: rgb(180, 179, 179);
-    font-size: small;
-}
-
 .form {
     width: 60%;
 }

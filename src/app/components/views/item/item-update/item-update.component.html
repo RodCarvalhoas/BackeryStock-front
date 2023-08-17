@@ -1,0 +1,34 @@
+<form>
+    <h1>ATUALIZAR ITEM</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="item.name" [formControl]="name" required type="text" name="Name" placeholder="Ex: Pão de queijo...">
+        <mat-error *ngIf="name.invalid"> {{ getMessage('name') }} </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Quantidade</mat-label>
+        <input matInput [(ngModel)]="item.quantidade" [formControl]="quantidade" required type="number" name="Quantidade" placeholder="1...2...">
+        <mat-error *ngIf="quantidade.invalid"> {{ getMessage('quantidade') }} </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Un Medida</mat-label>
+        <mat-select [(ngModel)]="item.unMedida" [formControl]="unMedida" name="UnidadeMedida" >
+            <mat-option *ngFor="let unidade of unidadesPermitidas" [value]="unidade">
+                {{ unidade }}
+            </mat-option>
+            <mat-error *ngIf="unMedida.invalid"> {{ getMessage('unMedida) }} </mat-error>
+        </mat-select>
+        
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Valor Un</mat-label>
+        <input matInput [(ngModel)]="item.valorUn" [formControl]="valorUn" required type="number" name="ValorUn" placeholder="R$ 1... R$ 2...">
+        <mat-error *ngIf="valorUn.invalid"> {{ getMessage('valorUn') }} </mat-error>
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button (click)="update()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">ATUALIZAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+</form>

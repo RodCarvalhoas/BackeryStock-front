@@ -1,0 +1,16 @@
+<form>
+    <h1>RETIRADA DE ITEM</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="item.name" type="text" name="Name" placeholder="Ex: Pão de queijo...">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Quantidade a SAIR</mat-label>
+        <input matInput [(ngModel)]="quantidade" type="number" name="Quantidade" placeholder="1...2...">
+    </mat-form-field>
+    <div class="buttons">
+        <button (click)="output()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">RETIRAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+</form>

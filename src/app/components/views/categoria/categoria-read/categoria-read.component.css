@@ -29,6 +29,10 @@ button{
     color: rgb(0, 0, 0);
 }
 
+.add{
+    vertical-align: auto;
+    
+}
 .delete{
     color: rgba(255, 0, 0, 0.764);
     margin-left: .5rem;

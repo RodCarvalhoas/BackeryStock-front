@@ -34,6 +34,16 @@ export class ItemService {
     return this.http.delete<void>(url);
   }
   
+  update(id: number,id_cat: number, item: Item): Observable<Item>{
+    const url = `${this.baseUrl}/item/${id}?categoria_id=${id_cat}`
+    return this.http.put<Item>(url, item);
+  }
+
+  output(id: number, quantidadeObj: any, item: Item): Observable<Item>{
+    const url = `${this.baseUrl}/item/${id}/item-output`
+    return this.http.patch<Item>(url, quantidadeObj)
+  }
+  
   mensagem(str: String): void {
     this._sack.open(`${str}`, `OK`, {
       horizontalPosition: 'end',

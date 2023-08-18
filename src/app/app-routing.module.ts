@@ -10,6 +10,7 @@ import { ItemCreateComponent } from './components/views/item/item-create/item-cr
 import { ItemDeleteComponent } from './components/views/item/item-delete/item-delete.component';
 import { ItemUpdateComponent } from './components/views/item/item-update/item-update.component';
 import { ItemOuputComponent } from './components/views/item/item-ouput/item-ouput.component';
+import { ItemEntryComponent } from './components/views/item/item-entry/item-entry.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'categorias/:id_cat/item/:id/item-output',
     component: ItemOuputComponent
+  },
+  {
+    path: 'categorias/:id_cat/item/:id/item-entry',
+    component: ItemEntryComponent
   }
 ];
 

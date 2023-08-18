@@ -11,6 +11,7 @@ i {
     padding-right: .6rem;
 }
 
+
 .mat-list {
     color: white;
     display: flex;
@@ -25,3 +26,12 @@ i {
     border-color: white;
     border-radius: 1%;
 }
+
+.white-bg{
+    color: white;
+}
+
+.white-text{
+    color: white;
+}
+

@@ -31,6 +31,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ItemDeleteComponent } from './components/views/item/item-delete/item-delete.component';
 import { ItemUpdateComponent } from './components/views/item/item-update/item-update.component';
 import { ItemOuputComponent } from './components/views/item/item-ouput/item-ouput.component';
+import { ItemEntryComponent } from './components/views/item/item-entry/item-entry.component';
 
 
 
@@ -49,7 +50,8 @@ import { ItemOuputComponent } from './components/views/item/item-ouput/item-oupu
     ItemCreateComponent,
     ItemDeleteComponent,
     ItemUpdateComponent,
-    ItemOuputComponent
+    ItemOuputComponent,
+    ItemEntryComponent
   ],
   imports: [
     BrowserModule,

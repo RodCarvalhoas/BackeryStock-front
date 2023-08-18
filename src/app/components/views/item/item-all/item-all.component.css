@@ -44,8 +44,13 @@ button{
     color: rgba(255, 0, 0, 0.764);
 }
 
+.add {
+    margin-right: 1.2rem; 
+    color: green;
+}
+
 .acoes{
-    width: 10rem;
+    width: 15rem;
 }
 
 .livros{

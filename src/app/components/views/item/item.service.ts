@@ -41,9 +41,14 @@ export class ItemService {
 
   output(id: number, quantidadeObj: any, item: Item): Observable<Item>{
     const url = `${this.baseUrl}/item/${id}/item-output`
-    return this.http.patch<Item>(url, quantidadeObj)
+    return this.http.patch<Item>(url, quantidadeObj);
   }
   
+  entry(id: number, quantidade: any, item: Item): Observable<Item>{
+    const url = `${this.baseUrl}/item/${id}/entry-item`
+    return this.http.patch<Item>(url, quantidade);
+  }
+
   mensagem(str: String): void {
     this._sack.open(`${str}`, `OK`, {
       horizontalPosition: 'end',

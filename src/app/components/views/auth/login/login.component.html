@@ -1,0 +1,17 @@
+<form>
+    <h1>LOGIN</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="usuario.name" type="text" name="nome">
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Senha</mat-label>
+        <input matInput [(ngModel)]="usuario.password" type="password" name="senha">
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button (click)="login()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">Entrar</button>
+    </div>
+    
+</form>

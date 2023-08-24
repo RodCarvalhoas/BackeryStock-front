@@ -11,51 +11,68 @@ import { ItemDeleteComponent } from './components/views/item/item-delete/item-de
 import { ItemUpdateComponent } from './components/views/item/item-update/item-update.component';
 import { ItemOuputComponent } from './components/views/item/item-ouput/item-ouput.component';
 import { ItemEntryComponent } from './components/views/item/item-entry/item-entry.component';
+import { LoginComponent } from './components/views/auth/login/login.component';
+import { AuthGuard } from './components/guards/auth-guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'categorias',
+    canActivate: [AuthGuard],
     component: CategoriaReadComponent
   },
   {
     path: 'categorias/create',
-    component: CategoriaCreateComponent
+    component: CategoriaCreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/delete/:id',
-    component: CategoriaDeleteComponent
+    component: CategoriaDeleteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/update/:id',
-    component: CategoriaUpdateComponent
+    component: CategoriaUpdateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/:id_cat/item',
-    component: ItemAllComponent
+    component: ItemAllComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/:id_cat/item/create',
-    component: ItemCreateComponent
+    component: ItemCreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/:id_cat/item/:id/delete',
-    component: ItemDeleteComponent
+    component: ItemDeleteComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/:id_cat/item/:id/update',
-    component: ItemUpdateComponent
+    component: ItemUpdateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/:id_cat/item/:id/item-output',
-    component: ItemOuputComponent
+    component: ItemOuputComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'categorias/:id_cat/item/:id/item-entry',
-    component: ItemEntryComponent
+    component: ItemEntryComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

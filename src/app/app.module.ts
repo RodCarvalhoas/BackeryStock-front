@@ -32,6 +32,10 @@ import { ItemDeleteComponent } from './components/views/item/item-delete/item-de
 import { ItemUpdateComponent } from './components/views/item/item-update/item-update.component';
 import { ItemOuputComponent } from './components/views/item/item-ouput/item-ouput.component';
 import { ItemEntryComponent } from './components/views/item/item-entry/item-entry.component';
+import { LoginComponent } from './components/views/auth/login/login.component';
+import { AuthGuard } from './components/guards/auth-guard';
+import { usuarioService } from './components/views/auth/usuario.service';
+
 
 
 
@@ -51,7 +55,9 @@ import { ItemEntryComponent } from './components/views/item/item-entry/item-entr
     ItemDeleteComponent,
     ItemUpdateComponent,
     ItemOuputComponent,
-    ItemEntryComponent
+    ItemEntryComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -72,7 +78,7 @@ import { ItemEntryComponent } from './components/views/item/item-entry/item-entr
     MatSelectModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [usuarioService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

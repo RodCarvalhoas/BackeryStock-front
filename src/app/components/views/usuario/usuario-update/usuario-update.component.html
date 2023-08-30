@@ -1,0 +1,43 @@
+<form>
+    <h1>ATUALIZAR USUÁRIO</h1>
+
+    <!-- Campos para atualização -->
+    <mat-form-field class="form">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="usuario.name" [formControl]="name" required type="text" name="Name">
+        <mat-error *ngIf="name.invalid"> {{ getMessage('name') }} </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="form">
+        <mat-label>E-mail</mat-label>
+        <input matInput [(ngModel)]="usuario.email" [formControl]="email" required type="text" name="email">
+        <mat-error *ngIf="email.invalid"> {{ getMessage('email') }} </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="form">
+        <mat-label>CPF</mat-label>
+        <input matInput [(ngModel)]="usuario.cpf" [formControl]="cpf" required type="text" name="cpf">
+        <mat-error *ngIf="cpf.invalid"> {{ getMessage('cpf') }} </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="form">
+        <mat-label>Permissão</mat-label>
+        <mat-select [(ngModel)]="usuario.role" [formControl]="role" name="role">
+            <mat-option *ngFor="let unidade of roles" [value]="unidade">
+                {{ unidade }}
+            </mat-option>
+            <mat-error *ngIf="role.invalid">{{ getMessage('role') }}</mat-error>
+        </mat-select>
+    </mat-form-field>
+    
+    <!-- Campo de senha nova -->
+    <mat-form-field class="form">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="senhaAntiga" type="password" name="password">
+    </mat-form-field>
+    
+    <div class="buttons">
+        <button (click)="update()" class="mat-elevation-z8" mat-stroked-button color="primary" style="color: green;">ATUALIZAR</button>
+        <button (click)="cancel()" class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    </div>
+</form>

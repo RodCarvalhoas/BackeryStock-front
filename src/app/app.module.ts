@@ -35,6 +35,11 @@ import { ItemEntryComponent } from './components/views/item/item-entry/item-entr
 import { LoginComponent } from './components/views/auth/login/login.component';
 import { AuthGuard } from './components/guards/auth-guard';
 import { usuarioService } from './components/views/auth/usuario.service';
+import { AdminGuard } from './components/guards/admin-guard';
+import { PaginaNaoEncontradaComponent } from './components/views/notfound/pagina-nao-encontrada/pagina-nao-encontrada.component';
+import { UsuarioAllComponent } from './components/views/usuario/usuario-all/usuario-all.component';
+import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+
 
 
 
@@ -57,6 +62,9 @@ import { usuarioService } from './components/views/auth/usuario.service';
     ItemOuputComponent,
     ItemEntryComponent,
     LoginComponent,
+    PaginaNaoEncontradaComponent,
+    UsuarioAllComponent,
+    UsuarioUpdateComponent,
 
   ],
   imports: [
@@ -78,7 +86,7 @@ import { usuarioService } from './components/views/auth/usuario.service';
     MatSelectModule,
     ReactiveFormsModule
   ],
-  providers: [usuarioService, AuthGuard],
+  providers: [usuarioService, AuthGuard, AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

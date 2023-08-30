@@ -13,6 +13,11 @@ import { ItemOuputComponent } from './components/views/item/item-ouput/item-oupu
 import { ItemEntryComponent } from './components/views/item/item-entry/item-entry.component';
 import { LoginComponent } from './components/views/auth/login/login.component';
 import { AuthGuard } from './components/guards/auth-guard';
+import { AdminGuard } from './components/guards/admin-guard';
+import { PaginaNaoEncontradaComponent } from './components/views/notfound/pagina-nao-encontrada/pagina-nao-encontrada.component';
+import { UsuarioAllComponent } from './components/views/usuario/usuario-all/usuario-all.component';
+import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+
 
 const routes: Routes = [
   {
@@ -26,23 +31,23 @@ const routes: Routes = [
   },
   {
     path: 'categorias',
-    canActivate: [AuthGuard],
-    component: CategoriaReadComponent
-  },
+    component: CategoriaReadComponent,
+    canActivate: [AuthGuard]
+    },
   {
     path: 'categorias/create',
     component: CategoriaCreateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AdminGuard]
   },
   {
     path: 'categorias/delete/:id',
     component: CategoriaDeleteComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AdminGuard]
   },
   {
     path: 'categorias/update/:id',
     component: CategoriaUpdateComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AdminGuard]
   },
   {
     path: 'categorias/:id_cat/item',
@@ -73,7 +78,25 @@ const routes: Routes = [
     path: 'categorias/:id_cat/item/:id/item-entry',
     component: ItemEntryComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  {
+    path: 'usuarios',
+    component: UsuarioAllComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'usuarios/update/:id',
+    component: UsuarioUpdateComponent,
+    canActivate: [AdminGuard]
+  },
+  //{
+  //  path: 'pagina-nao-encontrada',
+  //  component: PaginaNaoEncontradaComponent
+  //},
+  //{
+  //  path: '**', 
+  //  redirectTo: '/pagina-nao-encontrada' 
+  //}
 ];
 
 @NgModule({

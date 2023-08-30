@@ -1,27 +1,52 @@
-# BackerystockFront
+# BackeryStock - FrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
+![image](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/dfb94990-8c16-4b16-916d-822c41021dac)
 
-## Development server
+O BackeryStock é um projeto de estudo, onde pude coloar em prática do 0, todo o meu conhecimento, foi feito para uma padaria próspera e organizada! 
+Este projeto oferece um sistema completo de gestão de estoque.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+💡 O Que o BackeryStock Oferece?
 
-## Code scaffolding
+Gerenciar um estoque nunca foi tão fácil e eficiente:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Organização por Categoria: Mantenha seus produtos categorizados para uma visão clara do que você tem em estoque.
 
-## Build
+Controle de Entrada e Saída: Registre com facilidade a entrada e a saída de materiais, garantindo que você esteja sempre no topo das operações do seu estoque.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Avaliação do Estoque: Acompanhe o valor monetário do seu estoque, para que você possa tomar decisões informadas sobre compras e vendas.
 
-## Running unit tests
+Administração Simplificada: Através de um usuário administrador, você tem o poder total de editar, excluir e gerenciar categorias, itens e até mesmo usuários.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📸 Prints
 
-## Running end-to-end tests
+![image](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/a2efcad3-266d-41b1-9439-233a112929ae)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![image](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/c00fbfaf-abf5-444e-a33d-71c1bc59d06e)
 
-## Further help
+![image](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/115e7de1-f78b-4c17-adc4-68ffdd86c94e)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/73b33dec-5014-4db0-9cfa-ae8d14324965)
+
+## 🛠️ Instalação
+
+Você precisará ter o Node.Js instalado em sua máquina, pode baixar a versão mais atual.
+
+```bash
+git clone [https://github.com/seu-usuario/seu-projeto.git](https://github.com/RodCarvalhoas/BackeryStock-front.git)https://github.com/RodCarvalhoas/BackeryStock-front.git
+
+abrir o terminal do projeto e digitar:
+
+"cd .\backerystock-front\"
+
+npm install
+
+ng serve 
+
+Irá iniciar a aplicação na porta 4200:
+
+http://localhost:4200/login
+
+*SERÁ NECESSÁRIO TAMBÉM ESTAR RODANDO A APLICAÇÃO BACK-END JUNTAMENTE, VOCÊ PODERÁ OPTAR SE DESEJA RODAR EM UM DOCKER, MÁQUINA VIRTUAL OU NUVEM, APENAS SE ATENTAR PARA MUDAR A URL BASE*
+
+Link para aplicação back-end:
+https://github.com/RodCarvalhoas/BackeryStock

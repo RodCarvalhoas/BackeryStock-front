@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Usuario } from '../../auth/usuario.model';
-import { usuarioService } from '../../auth/usuario.service';
+import { Usuario } from '../usuario.model';
+import { usuarioService } from '../usuario.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -28,8 +28,8 @@ export class UsuarioAllComponent {
     })
   }
 
-  navegarParaCategoriaCreate(){
-    this.router.navigate(["categorias/create"])
+  navegarParaUsuarioCreate(){
+    this.router.navigate(["usuarios/create"])
   }
 
 

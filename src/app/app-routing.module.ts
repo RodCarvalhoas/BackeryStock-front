@@ -17,6 +17,7 @@ import { AdminGuard } from './components/guards/admin-guard';
 import { PaginaNaoEncontradaComponent } from './components/views/notfound/pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { UsuarioAllComponent } from './components/views/usuario/usuario-all/usuario-all.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 
 
 const routes: Routes = [
@@ -89,14 +90,19 @@ const routes: Routes = [
     component: UsuarioUpdateComponent,
     canActivate: [AdminGuard]
   },
-  //{
-  //  path: 'pagina-nao-encontrada',
-  //  component: PaginaNaoEncontradaComponent
-  //},
-  //{
-  //  path: '**', 
-  //  redirectTo: '/pagina-nao-encontrada' 
-  //}
+  {
+    path: 'usuarios/create',
+    component: UsuarioCreateComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'pagina-nao-encontrada',
+    component: PaginaNaoEncontradaComponent
+  },
+  {
+    path: '**', 
+    redirectTo: '/pagina-nao-encontrada' 
+  }
 ];
 
 @NgModule({

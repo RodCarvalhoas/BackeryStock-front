@@ -46,6 +46,11 @@ export class usuarioService {
     return this.http.put<Usuario>(url, usuario);
   }
 
+  create(usuario: Usuario): Observable<Usuario>{
+    const url = `${this.baseUrl}/Usuario`
+    return this.http.post<Usuario>(url, usuario)
+  }
+
   mensagem(str: String): void {
     this._sack.open(`${str}`, `OK`, {
       horizontalPosition: 'end',

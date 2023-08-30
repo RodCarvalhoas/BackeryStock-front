@@ -1,10 +1,11 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
-import { AuthenticationDTO } from '../authentticationDTO';
-import { usuarioService } from '../usuario.service';
+import { AuthenticationDTO } from '../../usuario/authentticationDTO';
+import { usuarioService } from '../../usuario/usuario.service';
 import { ActivatedRoute, Router, RouterStateSnapshot } from '@angular/router';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { Observable } from 'rxjs/internal/Observable';
-import { Usuario } from '../usuario.model';
+import { Usuario } from '../../usuario/usuario.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit{
     password: ''
   }
 
-  constructor(private service: usuarioService, private router: Router, private route: ActivatedRoute){}
+  constructor(private service: usuarioService, private router: Router, private route: ActivatedRoute, private _sack: MatSnackBar){}
   
   ngOnInit(): void {
   }
@@ -37,13 +38,21 @@ export class LoginComponent implements OnInit{
               this.router.navigate(['/']);
             },
             (error) => {
-              console.error('Erro ao efetuar login:', error);
+              this.mensagem('Digite um Nome e senha válido.');
               this.service.isAuthenticatedEmitter.emit(false)
             }
           );
        
     } else {
-      console.log('Por favor, preencha o nome de usuário e senha.');
+      this.mensagem('Por favor, preencha o nome de usuário e senha.');
     }
+  }
+
+  mensagem(str: String): void {
+    this._sack.open(`${str}`, `OK`, {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
+    })
   }
 }

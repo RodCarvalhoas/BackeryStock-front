@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { usuarioService } from '../../views/auth/usuario.service';
+import { usuarioService } from '../../views/usuario/usuario.service';
 
 @Component({
   selector: 'app-nav',

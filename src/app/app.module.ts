@@ -34,11 +34,12 @@ import { ItemOuputComponent } from './components/views/item/item-ouput/item-oupu
 import { ItemEntryComponent } from './components/views/item/item-entry/item-entry.component';
 import { LoginComponent } from './components/views/auth/login/login.component';
 import { AuthGuard } from './components/guards/auth-guard';
-import { usuarioService } from './components/views/auth/usuario.service';
+import { usuarioService } from './components/views/usuario/usuario.service';
 import { AdminGuard } from './components/guards/admin-guard';
 import { PaginaNaoEncontradaComponent } from './components/views/notfound/pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { UsuarioAllComponent } from './components/views/usuario/usuario-all/usuario-all.component';
 import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+import { UsuarioCreateComponent } from './components/views/usuario/usuario-create/usuario-create.component';
 
 
 
@@ -65,6 +66,7 @@ import { UsuarioUpdateComponent } from './components/views/usuario/usuario-updat
     PaginaNaoEncontradaComponent,
     UsuarioAllComponent,
     UsuarioUpdateComponent,
+    UsuarioCreateComponent,
 
   ],
   imports: [

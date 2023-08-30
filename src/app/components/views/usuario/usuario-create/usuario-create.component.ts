@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Usuario } from '../usuario.model';
 import { FormControl, Validators } from '@angular/forms';
+import { Usuario } from '../usuario.model';
 import { usuarioService } from '../usuario.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 enum Role {
   admin = 'ADMIN',
@@ -11,11 +10,11 @@ enum Role {
 }
 
 @Component({
-  selector: 'app-usuario-update',
-  templateUrl: './usuario-update.component.html',
-  styleUrls: ['./usuario-update.component.css']
+  selector: 'app-usuario-create',
+  templateUrl: './usuario-create.component.html',
+  styleUrls: ['./usuario-create.component.css']
 })
-export class UsuarioUpdateComponent {
+export class UsuarioCreateComponent {
 
 //Validações
 name = new FormControl("", [Validators.minLength(3), Validators.maxLength(100)]);
@@ -24,7 +23,6 @@ cpf = new FormControl("", [Validators.minLength(11), Validators.maxLength(11)]);
 role = new FormControl("", [Validators.min(1)]);
 
 usuario: Usuario = {
-  id: undefined,
   name: ``,
   email: ``,
   cpf: ``,
@@ -32,19 +30,11 @@ usuario: Usuario = {
   password: ``
 } 
 
-senhaAntiga : string = ``;
 
 constructor(private service: usuarioService, private route: ActivatedRoute, private router: Router){}
 
 ngOnInit(): void {
-  const idUsuario = this.route.snapshot.paramMap.get("id");
 
-  if (idUsuario !== null) {
-    this.usuario.id = +idUsuario; // Converte para número
-  }
-
-  this.findById()
-  console.log(this.usuario.role)
 }
 
 roles: Role[] = [Role.admin, Role.user];
@@ -79,21 +69,10 @@ getMessage(fieldName: string): string {
   return '';
 }
 
-findById(): void{
-    this.service.findById(this.usuario.id!).subscribe((resposta) => {
-      this.usuario = resposta;
-    })
-}
-
-update(): void{
-  if(this.senhaAntiga != null || this.senhaAntiga != ""){
-    // Se uma nova senha foi fornecida, atualize a senha antiga
-    this.usuario.password = this.senhaAntiga;
-  }
-
-  this.service.update(this.usuario.id!, this.usuario).subscribe((resposta) => {
+create(): void{
+  this.service.create(this.usuario).subscribe((resposta) => {
     this.router.navigate([`usuarios`])
-    this.service.mensagem('Usuario editado com sucesso!')
+    this.service.mensagem('Usuário criado com sucesso!')
   }, err => {
     this.service.mensagem(err.error.error)
   })
@@ -102,7 +81,5 @@ update(): void{
 cancel(): void{
   this.router.navigate([`usuarios`])
 }
-
-
 
 }

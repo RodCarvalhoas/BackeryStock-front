@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { usuarioService } from '../views/auth/usuario.service';
+import { usuarioService } from '../views/usuario/usuario.service';
 
 @Injectable({
   providedIn: 'root'

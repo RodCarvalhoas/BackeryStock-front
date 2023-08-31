@@ -1,6 +1,6 @@
 # BackeryStock - FrontEnd
 
-![image](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/dfb94990-8c16-4b16-916d-822c41021dac | width=200)
+![bread](https://github.com/RodCarvalhoas/BackeryStock-front/assets/105681818/28d67379-e9f6-4bb0-9278-4d0ccad34b82)
 
 O BackeryStock é um projeto de estudo, onde pude coloar em prática do 0, todo o meu conhecimento, foi feito para uma padaria próspera e organizada! 
 Este projeto oferece um sistema completo de gestão de estoque.
